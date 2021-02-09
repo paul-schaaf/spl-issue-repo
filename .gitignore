@@ -1,3 +1,6 @@
+# Compiled binaries
+program/target
+
 # Logs
 logs
 *.log
