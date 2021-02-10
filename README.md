@@ -10,3 +10,14 @@
 4. `npm install` all dependences for the `js/` directory. Start the server with
    `npm start`.
 5. Navigate to `localhost:3000` and click the Reproduce button.
+
+Example error output:
+
+```
+Instruction 0: Program failed to complete 
+    Program 5GXFfGR8VtgYRtYy2RV9RPrirMnhytUPuefiiE5idoau invoke [1]
+    Program log: Instruction: Initialize liquidity.
+    Program log: 3HY5r4jyw11VZeqxK8AMrub4yAmeZyWMKtt4orbezeQM
+    Program log: 11111111111111111111111111111111
+    Program log: Panicked at: 'called `Result::unwrap()` on an `Err` value: InvalidAccountData'
+```
