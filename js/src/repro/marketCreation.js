@@ -13,7 +13,7 @@ import { Repro } from "./reproInstruction";
 const KEYPAIR_STR = require('../test-wallet-only.json');
 
 export async function repro() {
-  const connection = new Connection(clusterApiUrl("devnet"));
+  const connection = new Connection(clusterApiUrl("devnet"), 'singleGossip');
 
   const keypair = Buffer.from(KEYPAIR_STR);
   const adminAccount = new Account(keypair);
@@ -37,6 +37,7 @@ export async function repro() {
   const tx = new Transaction();
   tx.add(ix);
 
-  await sendAndConfirmTransaction(connection, tx, [adminAccount]);
+  const txid = await sendAndConfirmTransaction(connection, tx, [adminAccount]);
+  console.log(txid);
   console.log("Tx succeeded.");
 }

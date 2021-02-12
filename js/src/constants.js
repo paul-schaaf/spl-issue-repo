@@ -7,7 +7,7 @@ export const ENDPOINTS = {
 };
 
 export const REPRO_ADDRESS = new PublicKey(
-  "4Tp45VFoC62XyzBrTf77ek1rFhvkxnsaJkHgbNGHgWwQ"
+  "9APKss9YEMHLhfQoZzEZZ5eVNp2jC9oGqyjjTxgCbN6Y"
 );
 
 export const DEVNET_SPL_TOKEN_PROGRAM = new PublicKey(
