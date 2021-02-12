@@ -5,7 +5,8 @@ import { Numberu64 } from "@solana/spl-token-swap";
 import { REPRO_ADDRESS } from "../constants";
 
 export class Repro {
-  static createInitializeTokenInstruction(
+  static async createInitializeTokenInstruction(
+    connection,
     token: Account,
     token2key: PublicKey
   ) {
@@ -28,6 +29,9 @@ export class Repro {
       },
       data
     );
+
+    console.log((await connection.getAccountInfo(token2key, 'recent')).owner.toBase58());
+
 
     return new TransactionInstruction({
       keys,

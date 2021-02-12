@@ -28,8 +28,9 @@ export async function repro() {
   );
 
   const tokenAccountKey = await mint.createAccount(adminAccount.publicKey);
-
-  const ix = Repro.createInitializeTokenInstruction(
+  
+  const ix = await Repro.createInitializeTokenInstruction(
+    connection,
     adminAccount,
     tokenAccountKey
   );
